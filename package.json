@@ -1,0 +1,35 @@
+{
+  "name": "spectato",
+  "version": "1.0.4",
+  "main": "./main.js",
+  "author": "slav",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win",
+    "deploy": "electron-builder --win --publish=always"
+  },
+  "build": {
+    "appId": "com.slav.spectato",
+    "productName": "spectato",
+    "win": {
+      "target": "nsis"
+    },
+    "directories": {
+      "output": "dist"
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "slavcp",
+      "repo": "spectato"
+    }
+  },
+  "devDependencies": {
+    "electron": "10.4.7",
+    "electron-builder": "^25.1.8"
+  },
+  "dependencies": {
+    "electron-store": "8.2.0",
+    "electron-updater": "^6.3.9"
+  },
+  "packageManager": "pnpm@9.10.0+sha512.73a29afa36a0d092ece5271de5177ecbf8318d454ecd701343131b8ebc0c1a91c487da46ab77c8e596d6acf1461e3594ced4becedf8921b074fbd8653ed7051c"
+}
