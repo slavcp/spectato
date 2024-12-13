@@ -299,10 +299,8 @@ function setupSpec() {
             const killedElement = killfeedMsg.querySelector('span:nth-of-type(2)');
             const killerPlayerName = extractName(killerElement);
             const killedPlayerName = extractName(killedElement);
-            strippedConsole.log(`${killerPlayerName} killed ${killedPlayerName}`)
             if (killedPlayerName === currentPlayer.name) {
               const killerPlayer = Object.values(players).find(player => killerPlayerName === player.name);
-              strippedConsole.log(killerPlayer.gameNumber)
               spectatePlayer(killerPlayer.gameNumber);
               return;
             }
