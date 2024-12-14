@@ -33,8 +33,6 @@ class resourceSwap {
             `*://*.krunker.io${name}?*`
         ];
         this.urls.push(...tests)}
-}
-}
-}
+}}}
 
 module.exports = resourceSwap;
