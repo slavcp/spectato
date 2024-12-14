@@ -21,5 +21,5 @@
  - more settings to toggle certain features on/off
  - MIGRATE TO [TAURI](https://tauri.app/) (**actually** never happening)
 
-make an issue or dm `slaav` on discord for anything related
+make an issue or dm `slaav` on discord for anything related  
 known issue camera waypoints dont change camera y rotation
