@@ -234,7 +234,7 @@ function processPlayers() {
 }
 
 function changeFocusedPlayer() {
-  // god i wanna killmyself
+  // holy cow this could not be any worse
   let focusedPlayer
   setTimeout(() => {
     for (const currentPlayer of Object.values(players)) {
@@ -246,7 +246,7 @@ function changeFocusedPlayer() {
        focusedPlayer.focused = true;
        centerHolder.style.display = "flex";
        focusedPlayer.holder.classList.add("focused"); } 
-  }, 110); // 110 cause i dont trust js timeouts
+  }, 50);
   if (document.querySelector("#specStats").style.display.includes("none")) return
   focusedPlayer = Object.values(players).find(player => document.querySelector(".specPHead").firstChild.textContent === player.name);
   const teamColor = focusedPlayer?.team === 1 ? "team1Color" : "team2Color";
@@ -317,7 +317,7 @@ function setupSpec() {
     killTotal.querySelector("#team2Kills").textContent = team2Kills;
   }
 
-  setInterval(playerUpdate, 100);
+  setInterval(playerUpdate, 50);
 
   teamChanges.id = "teamChanges";
   teamChanges.innerHTML = `
