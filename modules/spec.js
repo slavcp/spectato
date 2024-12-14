@@ -187,8 +187,8 @@ function processLbData() {
     if (!currentPlayer.team) currentPlayer.team = playerNameElem.classList.contains("newLeaderNameF") ? 1 : 2;
 
     const currentKillValue = parseInt(row.cells[3].textContent);
-    const currentScoreValue = parseFloat(row.cells[1].textContent.replace(/[k]/, '')) * (row.cells[1].textContent.match(/[k]/) ? 1000 : 1);
-    const currentObjValue = parseFloat(row.cells[2].textContent.replace(/[k]/, '')) * (row.cells[2].textContent.match(/[k]/) ? 1000 : 1);
+    const currentScoreValue = Math.round(parseFloat(row.cells[1].textContent.replace(/[k]/, '')) * (row.cells[1].textContent.match(/[k]/) ? 1000 : 1));
+    const currentObjValue = Math.round(parseFloat(row.cells[2].textContent.replace(/[k]/, '')) * (row.cells[2].textContent.match(/[k]/) ? 1000 : 1));
 
     if (currentKillValue > currentPlayer.kills) currentPlayer.streak++;
 
