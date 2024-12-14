@@ -1,8 +1,6 @@
 # spectato
 
 ### **THIS CLIENT IS MERELY FOR SPECTATING COMP MATCHES, YOU CANNOT PLAY THE GAME ON IT**
-you might also get ac flagged for using it im not good at this cheating shit so use an alt
-
 
 ## client features
  - resource swapper **(i meant for the client to be used with custom css; base styles are just what i stumbled upon when i smashed my keyboard)**
@@ -18,9 +16,8 @@ you might also get ac flagged for using it im not good at this cheating shit so 
  
 ## in the future (never happening)
  - track player health without getting banned
-*if any rule breaker knows how to do either of those, let me know 😉*
  - user-made camera tp waypoints
  - more settings to toggle certain features on/off
  - MIGRATE TO [TAURI](https://tauri.app/) (**actually** never happening)
 
-make an issue or dm `slaav` on discord for anything related
+make an issue or dm `slaav` on discord for anything related  

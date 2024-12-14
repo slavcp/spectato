@@ -3,6 +3,7 @@ const players = {};
 const availableHolders = { team1: [], team2: [] };
 let team1Kills = 0, team2Kills = 0, team1Change = 0, team2Change = 0;
 let specCamera;
+let specCamera2;
 const killTotal = document.createElement("div");
 const teamChanges = document.createElement("div");
 const centerHolder = document.createElement("div");
@@ -31,6 +32,7 @@ __THREE_DEVTOOLS__.addEventListener("observe", (scene) => {
             )
           )
         );
+        specCamera2 = specCamera.children[0]
       }
     })()
 }
@@ -373,15 +375,17 @@ function setupSpec() {
         specCamera.position.x = waypoints[pressedNumber - 1][0];
         specCamera.position.y = waypoints[pressedNumber - 1][1];
         specCamera.position.z = waypoints[pressedNumber - 1][2];
-        specCamera.rotation.y = waypoints[pressedNumber - 1][3];
+        specCamera2.rotation.x = waypoints[pressedNumber - 1][3];
+        specCamera.rotation.y = waypoints[pressedNumber - 1][4];
       }, 1);
     } else if (event.key === "p") {
-      //    strippedConsole.log( 
-      //      Math.round(specCamera.position.x * 10) / 10,
-      //      Math.round(specCamera.position.y * 10) / 10,
-      //      Math.round(specCamera.position.z * 10) / 10,
-      //      Math.round(specCamera.rotation.y * 10) / 10
-      //    )
+  //        strippedConsole.log( 
+  //          Math.round(specCamera.position.x * 10) / 10,
+  //          Math.round(specCamera.position.y * 10) / 10,
+  //          Math.round(specCamera.position.z * 10) / 10,
+  //          Math.round(specCamera2.rotation.x * 10) / 10,
+  //          Math.round(specCamera.rotation.y * 10) / 10
+  //        )
     }
   });
 
