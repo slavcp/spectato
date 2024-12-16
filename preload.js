@@ -25,21 +25,6 @@ function isGameLoaded() {
       window.selectAttachment(-1); // unequip sight;
       window.closWind();
     }
-    document.addEventListener("keydown", (event) => {
-      switch (event.code) {
-        case "Escape":
-          document.exitPointerLock();
-          break;
-        case "F5":
-          event.preventDefault();
-          window.location.reload();
-          break;
-        case "F6":
-          event.preventDefault();
-          window.location.replace("https://krunker.io");
-          break;
-      }
-    });
 
     function searchMatches(setting) {
       let query = settingsWindow.settingSearch.toLowerCase() || "";
@@ -110,7 +95,7 @@ ipcRenderer.on("game-updated", () => {
 
   let gameStatus = window.getGameActivity();
 
-  if ((gameStatus.custom && gameStatus.mode === "Hardpoint") || gameStatus.map === null) {
+  if ((gameStatus.custom && gameStatus.mode === "Hardpoint")) {
     window.toggleSpect();
     const team1Color = config.getSync("team1Color");
     const team2Color = config.getSync("team2Color");
@@ -135,5 +120,21 @@ ipcRenderer.on("game-updated", () => {
     display: block!important;
     }`);
     setupSpec();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  switch (event.code) {
+    case "Escape":
+      document.exitPointerLock();
+      break;
+    case "F5":
+      event.preventDefault();
+      window.location.reload();
+      break;
+    case "F6":
+      event.preventDefault();
+      window.location.replace("https://krunker.io");
+      break;
   }
 });
