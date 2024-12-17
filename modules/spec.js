@@ -371,6 +371,8 @@ function setupSpec() {
       document.dispatchEvent(new KeyboardEvent('keydown', {keyCode: 222, bubbles: true}));
       document.dispatchEvent(new KeyboardEvent('keyup', {keyCode: 222, bubbles: true}));
       // DOESNT WORK WITHOUT THE TIMEOUT???
+
+        if (!waypoints[pressedNumber - 1]) return
       setTimeout(() => {
         specCamera.position.x = waypoints[pressedNumber - 1][0];
         specCamera.position.y = waypoints[pressedNumber - 1][1];
@@ -379,13 +381,13 @@ function setupSpec() {
         specCamera.rotation.y = waypoints[pressedNumber - 1][4];
       }, 1);
     } else if (event.key === "p") {
-  //        strippedConsole.log( 
-  //          Math.round(specCamera.position.x * 10) / 10,
-  //          Math.round(specCamera.position.y * 10) / 10,
-  //          Math.round(specCamera.position.z * 10) / 10,
-  //          Math.round(specCamera2.rotation.x * 10) / 10,
-  //          Math.round(specCamera.rotation.y * 10) / 10
-  //        )
+     //     strippedConsole.log( 
+     //       Math.round(specCamera.position.x * 10) / 10,
+     //       Math.round(specCamera.position.y * 10) / 10,
+     //       Math.round(specCamera.position.z * 10) / 10,
+     //       Math.round(specCamera2.rotation.x * 10) / 10,
+     //       Math.round(specCamera.rotation.y * 10) / 10
+     //     )
     }
   });
 
